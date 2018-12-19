@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>前端自动化工作流</title>
+    <link rel="dns-prefetch" href="http://saas.mljia.cn/"  data-des="DNS预解析">
+    <link rel="preconnect" href="http://saas.mljia.cn/"  data-des="预链接">
+    <!-- <link rel="prefetch" href="image.png" data-des="低优先级预下载"> -->
+    <link rel="subresource" href="styles.css" data-des="高优先级预下载">
+    <!-- <link rel="prerender" href="http://www.aseoe.com/" data-des="预渲染"> -->
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel='stylesheet' href='/stylesheets/lib/animate.min.css' />
+    <link rel='stylesheet' href='/stylesheets/manager/all.min.css?[[version]]' />
+
+    <script>
+    //解决electron和其他框架的冲突
+      try {
+        window.nodeRequire = require;
+        delete window.require;
+        delete window.exports;
+        delete window.module;
+      } catch (e) {
+        console.warn('fault-tolerant:',e)
+        window.nodeRequire = '';
+      }
+    var GLOBAL={
+      version: '[[version]]'
+    };
+
+ 
+
+    </script>
+
+    <script type="text/javascript" data-main="/javascripts/manager/requireConf.js[[fileVersion]]" src="/javascripts/lib/requireJS/requireJS.js"></script>
+
+  </head>
+  <body>
+    <div id="app">
+      <h1>Hello 123456</h1>
+
+      <p>
+        <!-- 使用 router-link 组件来导航. -->
+        <!-- 通过传入 `to` 属性指定链接. -->
+        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+        <router-link to="/">Go to Foo</router-link>
+        <router-link to="/busi">Go to busi</router-link>
+        <router-link to="/custom">Go to custom Bar</router-link>
+      </p>
+      <router-view></router-view>
+    </div>
+
+
+  </body>
+</html>

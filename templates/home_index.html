@@ -1,0 +1,35 @@
+[[include 'layout_home/header']]
+
+<script type="text/javascript" src="[[resourcesUrl]]/javascripts/lib/requireJS/requireJS.js"></script>
+<script type="text/javascript"  src="[[resourcesUrl]]/javascripts/manager/home/requireConf.js?[[version]]"></script>
+<link rel='stylesheet' href='[[resourcesUrl]]/stylesheets/lib/element/element.ui.min.css' />
+<link rel='stylesheet' href='[[resourcesUrl]]/stylesheets/manager/app.min.css?[[version]]' />
+<style media="screen">
+  .fade-enter-active, .fade-leave-active{
+      transition: all .2s ease;
+  }
+  .fade-enter, .fade-leave-active{
+    transform: translateX(5px);
+    opacity: 0.05;
+  }
+</style>
+</head>
+<body>
+[[include 'layout_home/top']]
+
+<div id="app" class="app-home">
+<!-- <router-link to="/">Go to Foo</router-link> -->
+   <transition name="fade" mode="out-in">
+     <router-view></router-view>
+   </transition>
+
+
+
+</div>
+
+
+
+
+<!-- 外部js资源文件引入 -->
+
+[[include 'layout_home/footer']]

@@ -1,0 +1,44 @@
+<div class="home-index">
+  <el-container>
+    <el-header class="header">头部标题</el-header>
+    <el-container>
+      <el-aside class="aside" width="200px">侧边菜单</el-aside>
+      <el-main>
+        <el-row>
+          <el-button>默认按钮</el-button>
+          <el-button type="primary">主要按钮</el-button>
+          <el-button type="success">成功按钮</el-button>
+          <el-button type="info">信息按钮</el-button>
+          <el-button type="warning">警告按钮</el-button>
+          <el-button type="danger">危险按钮</el-button>
+        </el-row>
+        <!--  -->
+        <el-row>
+          <el-button icon="el-icon-search" circle></el-button>
+          <el-button type="primary" icon="el-icon-edit" circle></el-button>
+          <el-button type="success" icon="el-icon-check" circle></el-button>
+          <el-button type="info" icon="el-icon-message" circle></el-button>
+          <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+          <el-button type="danger" icon="el-icon-delete" circle></el-button>
+        </el-row>
+        <!--  -->
+        <el-row>
+          <el-select v-model="value" placeholder="请选择">
+            <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+          </el-select>
+        </el-row>
+      <!--  -->
+      <el-row>
+        <el-table :data="tableData" style="width: 100%" border>
+          <el-table-column prop="date" label="日期" width="180"></el-table-column>
+          <el-table-column prop="name" label="姓名"></el-table-column>
+          <el-table-column prop="address" label="地址" ></el-table-column>
+        </el-table>
+      </el-row>
+
+
+      <!--  -->
+      </el-main>
+    </el-container>
+  </el-container>
+</div>

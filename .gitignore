@@ -1,0 +1,7 @@
+*.iml
+logger/
+build/
+dist/
+views/
+node_modules/
+.idea/
